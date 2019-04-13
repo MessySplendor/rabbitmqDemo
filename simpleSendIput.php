@@ -3,11 +3,11 @@
 
 
 //引用所需文件  
-require_once __DIR__ . '/vendor/autoload.php';  
+require_once '../vendor/autoload.php';   
 use PhpAmqpLib\Connection\AMQPStreamConnection;  
 use PhpAmqpLib\Message\AMQPMessage;  
 //建立一个连接通道，声明一个可以发送消息的队列hello  
-$connection = new AMQPStreamConnection('172.17.0.5', 5672, 'admin', 'admin123456','msg');  
+$connection = new AMQPStreamConnection('172.17.0.5', 5672, 'liuhaidong', '123456','kangbazi');  
 $channel = $connection->channel();  
 $channel->queue_declare('hello', false, false, false, false);  
 

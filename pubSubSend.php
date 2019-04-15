@@ -18,7 +18,7 @@ if (empty($data)) {
 
 $msg = new AMQPMessage($data);
 
-$channel->basic_publish($msg, 'logs');
+$channel->basic_publish($msg, 'toalluser');
 
 echo ' [x] Sent ', $data, "\n";
 

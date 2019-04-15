@@ -1,10 +1,12 @@
 <?php
 
-require_once __DIR__ . '/vendor/autoload.php';
+//require_once __DIR__ . '/vendor/autoload.php';
+require_once '../vendor/autoload.php';
+
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 use PhpAmqpLib\Message\AMQPMessage;
 
-$connection = new AMQPStreamConnection('172.17.0.5', 5672, 'admin', 'admin123456','msg');
+$connection = new AMQPStreamConnection('172.17.0.5', 5672, 'liuhaidong', '123456','kangbazi');
 $channel = $connection->channel();
 
 $channel->exchange_declare('topic_logs', 'topic', false, false, false);

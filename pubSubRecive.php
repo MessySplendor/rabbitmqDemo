@@ -11,7 +11,7 @@ $channel->exchange_declare('toalluser', 'fanout', false, false, false);
 
 list($queue_name, ,) = $channel->queue_declare("", false, false, true, false);
 
-$channel->queue_bind($queue_name, 'logs');
+$channel->queue_bind($queue_name, 'toalluser');
 
 echo " [*] Waiting for logs. To exit press CTRL+C\n";
 

@@ -1,12 +1,13 @@
 <?php
 
-require_once __DIR__ . '/vendor/autoload.php';
+require_once '../vendor/autoload.php';
+//require_once __DIR__ . '/vendor/autoload.php';
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 
-$connection = new AMQPStreamConnection('172.17.0.5', 5672, 'admin', 'admin123456','msg');
+$connection = new AMQPStreamConnection('172.17.0.5', 5672, 'liuhaidong', '123456','kangbazi');
 $channel = $connection->channel();
 
-$channel->exchange_declare('logs', 'fanout', false, false, false);
+$channel->exchange_declare('toalluser', 'fanout', false, false, false);
 
 list($queue_name, ,) = $channel->queue_declare("", false, false, true, false);
 

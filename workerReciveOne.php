@@ -2,7 +2,7 @@
 require_once __DIR__ . '/vendor/autoload.php';
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 
-$connection = new AMQPStreamConnection('172.17.0.5', 5672, 'admin', 'admin123456','msg');
+$connection = new AMQPStreamConnection('172.17.0.5', 5672, 'dabaobei', '123456','dabaobei');
 $channel = $connection->channel();
 
 $channel->queue_declare('task_queue', false, true, false, false);

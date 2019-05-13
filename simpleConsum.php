@@ -3,7 +3,7 @@
 
     require_once '../vendor/autoload.php';  
     use PhpAmqpLib\Connection\AMQPStreamConnection;  
-    $connection = new AMQPStreamConnection('172.17.0.5', 5672, 'dabaobei', '123456','dabaobei');  
+    $connection = new AMQPStreamConnection('172.17.0.3', 5672, 'admin', 'admin','kangbazi');
     $channel = $connection->channel();  
       
     $channel->queue_declare('hello', false, false, false, false);  

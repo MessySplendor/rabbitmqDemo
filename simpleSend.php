@@ -7,7 +7,7 @@ require_once '../vendor/autoload.php';
 use PhpAmqpLib\Connection\AMQPStreamConnection;  
 use PhpAmqpLib\Message\AMQPMessage;  
 //建立一个连接通道，声明一个可以发送消息的队列hello  
-$connection = new AMQPStreamConnection('172.17.0.5', 5672, 'dabaobei', '123456','dabaobei');  
+$connection = new AMQPStreamConnection('172.17.0.3', 5672, 'admin', 'admin','dabaobei');
 $channel = $connection->channel();  
 $channel->queue_declare('hello', false, false, false, false);  
   

@@ -5,7 +5,7 @@ require_once '../vendor/autoload.php';
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 use PhpAmqpLib\Message\AMQPMessage;
 
-$connection = new AMQPStreamConnection('172.17.0.5', 5672, 'liuhaidong', '123456','kangbazi');
+$connection = new AMQPStreamConnection('172.17.0.3', 5672, 'admin', 'admin','kangbazi');
 $channel = $connection->channel();
 
 $channel->exchange_declare('toalluser', 'fanout', false, false, false);

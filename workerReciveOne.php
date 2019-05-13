@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/vendor/autoload.php';
+require_once '../vendor/autoload.php';   
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 
 $connection = new AMQPStreamConnection('172.17.0.5', 5672, 'dabaobei', '123456','dabaobei');
